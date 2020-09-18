@@ -1,0 +1,13 @@
+{
+    "nombre":"paola Castro",
+    "tipo":"beneficiario",
+    "favoritos":[
+        {"nombre":"Ivesur", "ubicacion":"carrera 56 #19 - 84", "lat":"-74.1058592","long":"4.6372258", "ciudad":"Bogotá", "pais":"Colombia"},
+        {"nombre":"Mi Águila", "ubicacion":"Carrera 15#80 - 90", "lat":"-74.0587037","long":"4.667311", "ciudad":"Bogotá", "pais":"Colombia"},
+        {"nombre":"Aeropuerto el dorado", "ubicacion":"", "lat":"-74.1433933","long":"4.6972162", "ciudad":"Bogotá", "pais":"Colombia"},
+        {"nombre":"Work", "ubicacion":"Carrera 15#80 - 90", "lat":"-74.0587037","long":"4.667311", "ciudad":"Bogotá", "pais":"Colombia"},
+        {"nombre":"Home", "ubicacion":"carrera 50c # 41c-43", "lat":"-74.1311844","long":"4.5959547", "ciudad":"Bogotá", "pais":"Colombia"}
+      ]
+  }
+
+  

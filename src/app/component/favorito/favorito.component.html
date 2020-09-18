@@ -1,0 +1,14 @@
+<div class="contenedor" >
+    <span class="titulo">Favortios</span>
+    <div class="direccion" *ngFor="let item of favoritos" (click)="seleccionoFavorito(item)">
+        <div class="icono">
+            <i class="fa fa-star"></i>
+        </div>
+        <div class="informacion">
+            <span class="info-titulo">{{item.nombre}}</span>
+            <span class="info-direccion">{{item.ubicacion}},{{item.ciudad}},{{item.pais}}</span>
+        </div>
+        
+    </div>
+    
+</div>

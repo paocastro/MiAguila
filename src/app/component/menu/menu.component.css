@@ -1,0 +1,48 @@
+
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+.img-logo{
+    width: 100px;
+}
+.pic-user{
+    text-align: center;
+}
+.titulo{
+    font-size: 1.8rem;    
+    color: var(--color-principal);
+    font-weight: 300;
+}
+
+.beneficiario{
+    color: var(--color-principal);
+}
+
+.division{
+    padding:30px 25vw;
+    color: var(--color-principal);
+}
+
+.menu{
+    font-size: 1.5rem;
+    padding-left: 15px;
+    list-style: none;
+}
+.menu-item{
+    color: var(--color-secundario);
+    margin: 15px;
+    height: 30px;
+}
+
+.menu-item i{
+    margin-right: 10px;
+    padding-left: 10px;
+}
+.menu-item:hover{
+    border-left: 5px solid green;
+    background-color:var(--color-principal);
+    width: 60%;
+ 
+}

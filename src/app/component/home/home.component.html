@@ -1,0 +1,21 @@
+<div class="container">
+    <div *ngIf="isMobile" class="menu" (click)="menuVisible=!menuVisible">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="viewMenu" *ngIf="menuVisible">
+        <app-menu></app-menu>
+    </div>
+    <div class="mapa" *ngIf="punto1 && punto2" >
+        <div class="cambiarDestino" (click)="pedirViaje=true">
+            <i class="fa fa-map-marker"></i>
+            <span>Cambiar Destino</span>
+        </div>
+        <app-map [cordenada1]="punto1" [cordenada2]="punto2"></app-map>
+    </div>
+    <div class="pedirAguila" *ngIf="pedirViaje">
+        <app-viaje [informacion]="informacion"></app-viaje>
+        <div class="siguiente" (click)="pedirViaje=false">
+            <i class="fa fa-arrow-right"></i>
+        </div>
+    </div>
+</div>

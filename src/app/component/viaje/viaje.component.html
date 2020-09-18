@@ -1,0 +1,52 @@
+<div class="content">
+    <div class="header"></div>
+    <div class="usuario">
+        <div [ngClass]="tipoViaje===1? 'tipo-usuarioSeleccionado': 'tipo-usuario'" (click)="tipoViaje=1">
+            <i class="fa fa-user"></i>
+            <span>Para mi</span>
+        </div>
+        <div [ngClass]="tipoViaje===2 ?'tipo-usuarioSeleccionado': 'tipo-usuario'" (click)="tipoViaje=2">
+            <i class="fa fa-users"></i>
+            <span>Colega</span>
+        </div>
+        <div [ngClass]="tipoViaje===3? 'tipo-usuarioSeleccionado': 'tipo-usuario'" (click)="tipoViaje=3">
+            <i class="fa fa-user-plus"></i>
+            <span>Invitado</span>
+        </div>
+    </div>
+    <div class="pasos-viaje">
+        <ul class="stepper">
+            <li class="stepper-item item1">
+                <div [ngClass]="step===1? 'item-divSeleccionado':'item-div'" (click)="step=1">1</div> 
+                <span class="span-step-descripcion" *ngIf="step===1">Origen</span>
+            </li>
+            <li class="stepper-item">
+                <div [ngClass]="step===2? 'item-divSeleccionado':'item-div'" (click)="step=2">2</div>
+                <span class="span-step-descripcion" *ngIf="step===2">Destino</span>
+            </li>
+            <li class="stepper-item">
+                <div [ngClass]="step===3? 'item-divSeleccionado':'item-div'" (click)="step=3">3</div>
+            </li>
+            <li class="stepper-item">
+                <div [ngClass]="step===4? 'item-divSeleccionado':'item-div'" (click)="step=4">4</div>
+            </li>
+            <li class="stepper-item">
+                <div [ngClass]="step===5? 'item-divSeleccionado':'item-div'" (click)="step=5">5</div>
+            </li>
+            <li class="stepper-item">
+                <div [ngClass]="step===6? 'item-divSeleccionado':'item-div'" (click)="step=6">6</div>
+            </li>
+        </ul>
+    </div>
+    <div class="ubicacion" *ngIf="step===1">
+        <app-ubicacion [placeholder]="'¿Dónde te recogemos?'"></app-ubicacion>
+    </div>
+
+    <div class="ubicacion" *ngIf="step===2">
+        <app-ubicacion [placeholder]="'¿Dónde quieres ir?'"></app-ubicacion>
+    </div>
+
+    <div class="favoritos" *ngIf="informacion">
+        <app-favorito (seleccionoPunto)="seleccionoPunto($event)" [favoritos]="informacion.favoritos"></app-favorito>
+    </div>
+</div>
